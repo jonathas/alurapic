@@ -7,7 +7,6 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
 	$http.get('v1/fotos')
 	.success(function(fotos) {
 		$scope.fotos = fotos;
-		console.log("Hello");
 	})
 	.error(function(erro) {
 		console.log(erro);

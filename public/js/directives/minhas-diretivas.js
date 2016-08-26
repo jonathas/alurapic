@@ -6,7 +6,6 @@ angular.module('minhasDiretivas', [])
 		ddo.restrict = "AE";
         ddo.transclude = true;
 
-
 		ddo.scope = {
             titulo: '@'
         };
@@ -26,8 +25,8 @@ angular.module('minhasDiretivas', [])
             url: '@'
         };
 
-        ddo.template = '<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';           
-        
+        ddo.template = '<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';
+
         return ddo;
     })
     .directive('meuBotaoPerigo', function() {

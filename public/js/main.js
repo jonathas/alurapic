@@ -1,4 +1,4 @@
-angular.module('alurapic', ['ngAnimate', 'ngRoute', 'ngResource'])
+angular.module('alurapic', ['ngAnimate', 'ngRoute', 'ngResource', 'minhasDiretivas'])
 	.config(function($routeProvider, $locationProvider) {
 
 		$routeProvider.when('/fotos', {
