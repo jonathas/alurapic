@@ -1,15 +1,19 @@
-angular.module('alurapic').controller('FotosController', function($scope, recursoFoto) {
+angular.module('alurapic').controller('FotosController', function($scope, $http) {
 
 	$scope.fotos = [];
 	$scope.filtro = '';
 	$scope.mensagem = '';
 
-	$scope.foto = {
-		titulo: 'Leao',
-		url: 'http://www,fundosanimais.com/Minis/leoes.jpg'
-	};
+	$http.get('v1/fotos')
+	.success(function(fotos) {
+		$scope.fotos = fotos;
+		console.log("Hello");
+	})
+	.error(function(erro) {
+		console.log(erro);
+	});
 
-	recursoFoto.query(function(fotos) {
+	/*recursoFoto.query(function(fotos) {
 		$scope.fotos = fotos;
 	}, function(erro) {
 		console.log(erro);
@@ -25,6 +29,6 @@ angular.module('alurapic').controller('FotosController', function($scope, recurs
 			console.log(erro);
 			$scope.mensagem = 'Não foi possível apagar a foto ' + foto.titulo;
 		});
-	};
+	};*/
 
 });
