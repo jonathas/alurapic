@@ -1,19 +1,19 @@
 angular.module('alurapic')
-	.controller('FotoController', function($scope, recursoFoto, $routeParams, cadastroDeFotos) {
+	.controller('FotoController', function($scope) {
 
 		$scope.foto = {};
 		$scope.mensagem = '';
 
-		if($routeParams.fotoId) {
+		/*if($routeParams.fotoId) {
 			recursoFoto.get({fotoId: $routeParams.fotoId}, function(foto) {
-				$scope.foto = foto; 
+				$scope.foto = foto;
 			}, function(erro) {
 				console.log(erro);
 				$scope.mensagem = 'Não foi possível obter a foto'
 			});
-		}
+		}*/
 
-		$scope.submeter = function() {
+		/*$scope.submeter = function() {
 
 			if ($scope.formulario.$valid) {
 				cadastroDeFotos.cadastrar($scope.foto)
@@ -25,5 +25,5 @@ angular.module('alurapic')
 					$scope.mensagem = erro.mensagem;
 				});
 			}
-		};
+		};*/
 	});
